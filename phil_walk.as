@@ -1,4 +1,4 @@
-﻿stage.addEventListener(KeyboardEvent.KEY_DOWN, stage_keyDownHandler);
+stage.addEventListener(KeyboardEvent.KEY_DOWN, stage_keyDownHandler);
 phil_side_view.stop();
 
 function stage_keyDownHandler(event:KeyboardEvent):void
@@ -6,8 +6,12 @@ function stage_keyDownHandler(event:KeyboardEvent):void
 {
 	if(event.keyCode==Keyboard.LEFT)
 	{
-		phil_side_view.gotoAndStop(2);
+		phil_side_view.gotoAndStop(frontTurnSide);
 	}
+	if (phil_side_view.currentLabel == "frontTurnSide") 
+{ 
+    // do something  
+}
 	
 	phil_side_view.gotoAndStop(3);
 	if(event.keyCode==Keyboard.LEFT)
@@ -32,5 +36,5 @@ function stage_keyUpHandler(event:KeyboardEvent):void
 {
 	
 	phil_side_view.gotoAndStop(5);
-testing github	
+
 }
